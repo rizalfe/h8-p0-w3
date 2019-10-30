@@ -1,9 +1,11 @@
 var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 
 function dataHandling2(input) {
-    var spliceInput = input.splice(4, 1, "Pria", "SMA Internasional Metro");
+    input.splice(1, 1, 'Roman Alamsyah Elsharawy');
+    input.splice(2, 1, 'Provinsi Bandar Lampung');
+    input.splice(4, 1, "Pria", "SMA Internasional Metro");
     console.log(input);
-    
+
     var sliceTanggal = input[3].slice(3, 5)
     switch (sliceTanggal) {
         case '01':
@@ -45,6 +47,7 @@ function dataHandling2(input) {
             default:
             console.log('Tidak diketahui');
     }
+    
     var splitTanggal = input[3].split('/');
         splitTanggal.reverse();
         splitTanggal.splice(1, 2, splitTanggal[2],splitTanggal[1])
